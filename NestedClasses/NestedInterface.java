@@ -4,7 +4,7 @@ package NestedClasses;
 import java.util.*;
 interface Test1 {
     interface Yes {
-//        inner interface cant be protected / private
+// /        inner interface cant be protected / private
         void show();
     }
 }
