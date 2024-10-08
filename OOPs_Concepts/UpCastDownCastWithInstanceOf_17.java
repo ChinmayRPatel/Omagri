@@ -21,6 +21,7 @@ public class UpCastDownCastWithInstanceOf_17 {
 
         B_17 b3 = new B_17();
         A_17 a3 = new A_17();
+
         System.out.println("********");
         System.out.println(obj1 instanceof B_17);
         System.out.println(b3 instanceof B_17);
@@ -29,7 +30,7 @@ public class UpCastDownCastWithInstanceOf_17 {
         if (obj1 instanceof B_17) {
             B_17 obj2 = (B_17) obj1;  // Downcasting
             obj2.wow();  // Now we can call the child-specific method wow()
-            obj2.wow();
+            b3.wow();
         } else {
             System.out.println("The object is not an instance of B_17");
         }

@@ -1,4 +1,10 @@
 package OOPs_Concepts;
+//Convarient return type is simply the override the method that parent have
+//in co varient we are just return the class object os current class
+//as shown in this example first write the getAnimal Method which will return the objec of animal
+//similar to child class of animal is Dog
+//Dog class is simply over ride the getAnimal method and return the Object of Dog
+//This is ppossible because of coVarient return type
 
 class Animal{
     String name;

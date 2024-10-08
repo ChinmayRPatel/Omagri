@@ -3,6 +3,13 @@ package OOPs_Concepts;
 class Person {
     String name;
     int age;
+//    Instance blocks are executed whenever an object of any kind is created.
+//    If we want to write a logic that we want to execute on the creation of all kinds of objects,
+//    then using instance blocks is a good idea to avoid writing the same logic inside every constructor.
+
+//    Its will call before the constructor
+//    Every time when constructor is create then onstance block can modify the user illegal argument and make it easy t handle the some erro in that
+
 
     {
         System.out.println("Instance block: Validating default values");

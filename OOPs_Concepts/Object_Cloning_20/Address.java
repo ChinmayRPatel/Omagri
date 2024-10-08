@@ -1,7 +1,7 @@
 package OOPs_Concepts.Object_Cloning_20;
 
 public class Address implements Cloneable {
-    int addressId;
+    public int addressId;
 
     @Override
     protected Object clone() throws CloneNotSupportedException {
