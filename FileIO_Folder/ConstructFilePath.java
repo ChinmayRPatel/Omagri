@@ -6,13 +6,14 @@ import java.io.IOException;
 public class ConstructFilePath {
     public static void main(String[] args) {
         // Absolute path (specify the full path on your system)
-//        String absolutePath = "C:\\Users\\Admin\\OneDrive\\Desktop\\Omagri\\FileIO_Folder\\xyz.txt";
-//        File file = new File(absolutePath);
+        String absolutePath = "C:\\Users\\Admin\\OneDrive\\Desktop\\Omagri\\FileIO_Folder\\abc.txt";
+        File file = new File(absolutePath);
+
 
         // Relative path (file will be created relative to the working directory)
-        String relativePath = "example.txt";
-
-        File file = new File(relativePath);
+//        String relativePath = "example.txt";
+//
+//        File file = new File(relativePath);
 
         try {
             if (file.createNewFile()) {

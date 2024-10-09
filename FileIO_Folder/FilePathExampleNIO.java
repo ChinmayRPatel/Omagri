@@ -18,6 +18,9 @@ public class FilePathExampleNIO {
         } catch (IOException e) {
             System.out.println("An error occurred.");
             e.printStackTrace();
+        } catch (RuntimeException e) {
+            System.out.println(e.getMessage());
+            throw new RuntimeException(e);
         }
     }
 }

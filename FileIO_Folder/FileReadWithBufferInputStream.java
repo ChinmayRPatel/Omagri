@@ -70,8 +70,6 @@ public class FileReadWithBufferInputStream {
 
 
 //            *****************************Read the files by BufferedInputStreamReader **************************************
-
-
             System.out.println("**** File read By BufferedInputStream********");
             // Create input stream '*.txt' for reading containing text
             FileInputStream inputStream = new FileInputStream("C:\\Users\\Admin\\OneDrive\\Desktop\\Omagri\\FileIO_Folder\\writedFile\\WritedData.txt");
@@ -90,24 +88,24 @@ public class FileReadWithBufferInputStream {
                 System.out.print(c);
 
             }
-            System.out.println("Using the Buffered InputStream");
-            // Read number of bytes available
-            int rem_byte = buffInputStr.available();
-
-            // Byte array is declared
-            byte[] barr = new byte[rem_byte];
-
-            // Read byte into barr,
-            // starts at offset 1,
-            // 5 bytes to read
-            buffInputStr.read(barr, 1, 5);
-
-            // For each byte in barr
-            for (byte b : barr) {
-                if (b == (byte)0)
-                    b = (byte)'-';
-                System.out.print((char)b);
-            }
+//            System.out.println("Using the Buffered InputStream");
+//            // Read number of bytes available
+//            int rem_byte = buffInputStr.available();
+//
+//            // Byte array is declared
+//            byte[] barr = new byte[rem_byte];
+//
+//            // Read byte into barr,
+//            // starts at offset 1,
+//            // 5 bytes to read
+//            buffInputStr.read(barr, 1, 5);
+//
+//            // For each byte in barr
+//            for (byte b : barr) {
+//                if (b == (byte)0)
+//                    b = (byte)'-';
+//                System.out.print((char)b);
+//            }
             br.close();
             fr.close();
             buffInputStr.close();
