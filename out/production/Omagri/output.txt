@@ -1,1 +1,3 @@
-tisi aaa file ciontentc
+Hello, this is a file with a specific charset.
+This is an utf-8 encoded 
+ this is 3rd line 

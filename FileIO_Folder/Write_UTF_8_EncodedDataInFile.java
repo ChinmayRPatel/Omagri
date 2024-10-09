@@ -30,15 +30,15 @@ public class Write_UTF_8_EncodedDataInFile {
         }
 
         // Read from the file
-        try {
-            List<String> linesRead = Files.readAllLines(filePath, StandardCharsets.UTF_8);
-            System.out.println("Data read from the file:");
-            for (String line : linesRead) {
-                System.out.println(line);
-            }
-        } catch (IOException e) {
-            System.out.println("Error reading from the file: " + e.getMessage());
-        }
+//        try {
+//            List<String> linesRead = Files.readAllLines(filePath, StandardCharsets.UTF_8);
+//            System.out.println("Data read from the file:");
+//            for (String line : linesRead) {
+//                System.out.println(line);
+//            }
+//        } catch (IOException e) {
+//            System.out.println("Error reading from the file: " + e.getMessage());
+//        }
 
     }
 }
