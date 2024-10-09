@@ -4,6 +4,9 @@ package FileIO_Folder;
 import java.io.*;
 import java.nio.channels.FileChannel;
 import java.nio.file.Files;
+import java.nio.file.Path;
+import java.nio.file.Paths;
+import java.nio.file.StandardCopyOption;
 
 public class FileCopy {
     public static void main(String[] args) throws IOException {
@@ -89,6 +92,18 @@ public class FileCopy {
         File src = new File("C:\\Users\\Admin\\OneDrive\\Desktop\\Omagri\\aaa.txt");
         File dest = new File("C:\\Users\\Admin\\OneDrive\\Desktop\\Omagri\\abcdefg.txt");
         Files.copy(src.toPath(), dest.toPath());
+
+
+        // *********** copying the file using nio library
+        Path sourcePath = Paths.get("C:\\Users\\Admin\\OneDrive\\Desktop\\Omagri\\qq.txt");
+        Path destPath = Paths.get("C:\\Users\\Admin\\OneDrive\\Desktop\\Omagri\\copied_file_name.txt");
+
+        try {
+            Files.copy(sourcePath, destPath, StandardCopyOption.REPLACE_EXISTING);
+            System.out.println("File copied successfully.");
+        } catch (IOException e) {
+            e.printStackTrace();
+        }
 
     }
 }
