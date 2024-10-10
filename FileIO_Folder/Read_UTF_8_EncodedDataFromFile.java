@@ -1,28 +1,32 @@
 package FileIO_Folder;
 
-import java.io.BufferedReader;
-import java.io.FileInputStream;
-import java.io.IOException;
-import java.io.InputStreamReader;
+import java.io.*;
 import java.nio.charset.StandardCharsets;
 import java.nio.file.Files;
 import java.nio.file.Path;
 import java.nio.file.Paths;
+import java.util.Base64;
 import java.util.List;
 
 public class Read_UTF_8_EncodedDataFromFile {
     public static void main(String[] args) {
         // Specify the file path
-        String filePath = "C:\\Users\\Admin\\OneDrive\\Desktop\\abc.txt";
+        String filePath = "C:\\Users\\Admin\\OneDrive\\Desktop\\Omagri\\FileIO_Folder\\writedFile\\output.txt";
 
         try {
-            BufferedReader br = new BufferedReader(new InputStreamReader(new FileInputStream(filePath), "UTF-8")) ;
-                String line;
+            File f = new File(filePath);
+            BufferedReader br = new BufferedReader(new FileReader(f));
+            StringBuilder stringBuilder = new StringBuilder();
 
-                // Read each line of the file
-            while((line =br.readLine())!=null){
-                    System.out.println(line);
+            String str = "";
+            while((str = br.readLine())!=null){
+                stringBuilder.append(str);
             }
+            System.out.println("This is string builder "+stringBuilder.toString());
+//            System.out.println(str);
+            byte[] bytes= Base64.getDecoder().decode(stringBuilder.toString());
+            String decodedtext = new String(bytes, "UTF-8");
+            System.out.println("Decoded text is :- "+decodedtext);
         }catch (IOException e) {
             e.printStackTrace();
         }

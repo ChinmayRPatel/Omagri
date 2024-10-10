@@ -10,8 +10,9 @@ public class FilePathExampleNIO {
     public static void main(String[] args) {
 
         // Using Paths.get to create a file path
-        Path path = Paths.get("dir/subdir/createdByNois/example.txt");
+        Path path = Paths.get("D:/dir/subdir/createdByNois/example.txt");
         try {
+
             Files.createDirectories(path.getParent()); // Create directories if they don't exist
             Files.createFile(path);
             System.out.println("File created at: " + path.toAbsolutePath());

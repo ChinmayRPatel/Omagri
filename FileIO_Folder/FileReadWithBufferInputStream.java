@@ -22,11 +22,10 @@ public class FileReadWithBufferInputStream {
         String st = "";
         while((st=br.readLine())!=null) {
             System.out.println(st);
-
         }
 
 
-//        *********** 2nd Way to read from file *******************
+//        *********** 2nd Way t o read from file *******************
 //            2. FileReader class for Reading text file
             System.out.println("***2. Read file using FileReader class****");
             FileReader fr = new FileReader("C:\\Users\\Admin\\OneDrive\\Desktop\\Omagri\\FileIO_Folder\\writedFile\\WritedData.txt");
@@ -76,6 +75,7 @@ public class FileReadWithBufferInputStream {
 
             // Convert inputStream to  bufferedInputStream
             BufferedInputStream buffInputStr = new BufferedInputStream(inputStream);
+            System.out.println((char)buffInputStr.read());
 
             // Read until a single byte is available
             while (buffInputStr.available() > 0) {
