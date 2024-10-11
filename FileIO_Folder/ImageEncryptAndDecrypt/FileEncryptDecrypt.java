@@ -95,8 +95,8 @@ public class FileEncryptDecrypt {
         File inputFile = new File("C:\\Users\\Admin\\OneDrive\\Desktop\\Omagri\\FileIO_Folder\\UTF_8\\UTF_8.txt");
 
         // Encrypt the file
-        encryptFile(key, inputFile);
-        System.out.println("Encryption complete.");
+//        encryptFile(key, inputFile);
+//        System.out.println("Encryption complete.");
 
         // Decrypt the file
         decryptFile(key, inputFile);

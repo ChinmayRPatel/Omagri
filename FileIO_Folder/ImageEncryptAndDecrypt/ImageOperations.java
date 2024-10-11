@@ -106,35 +106,10 @@ public class ImageOperations {
         File file = fileChooser.getSelectedFile();
 
         try {
-//            encryptFile(String.valueOf(key), file);
-            decryptFile(key, file);
+            encryptFile(String.valueOf(key), file);
+//            decryptFile(key, file);
 
         } catch (Exception e) {
-            throw new RuntimeException(e);
-        }
-//        File input stream  for read file
-        try{
-//            FileInputStream fis = new FileInputStream(file);
-//
-//            byte[] data = new byte[fis.available()];
-//            int i=0;
-//            for(byte b:data){
-////                System.out.print(b);
-//                data[i]= (byte) (b^key);
-//                i++;
-//            }
-//            FileOutputStream fos = new FileOutputStream(file);
-//            fos.write(data);
-//
-//            System.out.println("\nImage is encrypted successfully");
-//            fos.close();
-//            fis.close();
-//            JOptionPane.showMessageDialog(null, "Done");
-
-//            fis.read()
-        } catch (Exception e) {
-            throw new RuntimeException(e);
-        } catch (Throwable e) {
             throw new RuntimeException(e);
         }
     }
@@ -144,13 +119,13 @@ public class ImageOperations {
         f.setSize(500, 500);
         f.setLocationRelativeTo(null);
         f.setVisible(true);
-        Font font = new Font("Roboto", Font.BOLD, 25);
+        Font font = new Font("Roboto", Font.BOLD, 12);
 
         JButton button = new JButton();
         button.setText("Open Image");
         button.setFont(font);
 
-        JTextField textField = new JTextField(100);
+        JTextField textField = new JTextField(50);
         textField.setFont(font);
         f.setLayout(new FlowLayout());
 
