@@ -92,7 +92,7 @@ public class FileEncryptDecrypt {
 
     public static void main(String[] args) throws Exception {
         String key = "1234567890123456"; // Sample 16-byte key for AES
-        File inputFile = new File("C:\\Users\\Admin\\OneDrive\\Desktop\\Omagri\\FileIO_Folder\\UTF_8\\UTF_8.txt");
+        File inputFile = new File("C:\\Users\\Admin\\OneDrive\\Desktop\\Omagri\\Images\\download.jpg");
 
         // Encrypt the file
 //        encryptFile(key, inputFile);

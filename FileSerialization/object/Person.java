@@ -10,6 +10,8 @@ public class Person implements Serializable {
     int id;
     String pName;
     int age;
+//    transient String pwd;
+//    In above password will not a take a part in serialize object in file IO and it will return the null when you try to call it
 
     public Person(int id, String pName, int age) {
         this.id = id;

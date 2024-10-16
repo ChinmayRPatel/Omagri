@@ -17,8 +17,6 @@ public class WriteObjectToFile {
         Person p6 = new Person(6, "Flok", 12);
 
         try{
-            FileOutputStream fos = new FileOutputStream("C:\\Users\\Admin\\OneDrive\\Desktop\\Omagri\\FileSerialization\\object\\person.ser", true);
-            ObjectOutputStream outputStream = new ObjectOutputStream(fos);
             List<Person> personList = new ArrayList<>();
             personList.add(p1);
             personList.add(p2);
@@ -27,6 +25,9 @@ public class WriteObjectToFile {
             personList.add(p5);
             personList.add(p6);
 
+
+            FileOutputStream fos = new FileOutputStream("C:\\Users\\Admin\\OneDrive\\Desktop\\Omagri\\FileSerialization\\object\\person.ser", true);
+            ObjectOutputStream outputStream = new ObjectOutputStream(fos);
             outputStream.writeObject(personList);
             System.out.println("Person is added successfully :-\n");
 

@@ -9,6 +9,7 @@ public class ExceptionPropagation {
             System.out.println("Exception caught in method");
         }
     }
+
     public void method1(){
         method2();
     }

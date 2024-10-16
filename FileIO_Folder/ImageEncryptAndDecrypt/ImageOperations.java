@@ -106,8 +106,8 @@ public class ImageOperations {
         File file = fileChooser.getSelectedFile();
 
         try {
-            encryptFile(String.valueOf(key), file);
-//            decryptFile(key, file);
+//            encryptFile(String.valueOf(key), file);
+            decryptFile(key, file);
 
         } catch (Exception e) {
             throw new RuntimeException(e);
