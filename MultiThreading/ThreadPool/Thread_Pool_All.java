@@ -11,8 +11,7 @@ public class Thread_Pool_All {
 
             public static void main(String[] args) {
                 ThreadPoolExecutor executor = new ThreadPoolExecutor(2, 4, 5000, TimeUnit.MILLISECONDS, new ArrayBlockingQueue<>(5));
-
-                for (int i = 1; i <= 9; i++) {
+                for (int i = 1; i <= 10; i++) {
                     int finalI = i;
                     executor.submit(() -> {
                         try {
