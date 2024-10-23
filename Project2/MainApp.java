@@ -1,8 +1,6 @@
 package Project2;
 
-import java.util.HashMap;
-import java.util.Map;
-import java.util.Scanner;
+import java.util.*;
 
 public class MainApp {
     public static void main(String[] args) {
@@ -12,6 +10,14 @@ public class MainApp {
         addressMap.put(2, new Address(2, "Bengaluru", "Karnataka"));
         addressMap.put(3, new Address(3, "Chennai", "Tamil Nadu"));
 
+        TreeMap<Integer, Student> tmap = new TreeMap<>();
+        tmap.put(2, new Student(1, "Abdul K", 1,addressMap.get(1)));
+        tmap.put(11, new Student(1, "Abdul K", 1,addressMap.get(1)));
+        tmap.put(12, new Student(1, "Abdul K", 1,addressMap.get(1)));
+        tmap.put(1, new Student(1, "Abdul K", 1,addressMap.get(1)));
+        tmap.put(13, new Student(1, "Abdul K", 1,addressMap.get(1)));
+        tmap.put(6, new Student(1, "Abdul K", 1,addressMap.get(1)));
+        System.out.println("TMap = "+tmap);
         // Step 2: Create a map for storing students by their ID, linking them with addresses
         Map<Integer, Student> studentMap = new HashMap<>();
         studentMap.put(1, new Student(1, "Abdul K", 1,addressMap.get(1)));
@@ -29,5 +35,10 @@ public class MainApp {
         } else {
             System.out.println("******Student not found!****8");
         }
+
+
+//        TreeSet<Address> add = new TreeSet<>();
+//        add.add(new Address(1, "Ahmedabad", "Gujarat"));
+//        System.out.println(add);
     }
 }
