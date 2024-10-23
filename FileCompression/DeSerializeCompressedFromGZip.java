@@ -14,8 +14,9 @@ public class DeSerializeCompressedFromGZip {
             FileInputStream fis = new FileInputStream(filepath);
             GZIPInputStream zis = new GZIPInputStream(fis);
             ObjectInputStream ois = new ObjectInputStream(zis);
-            List<Student> s = (List<Student>) ois.readObject();
-            return s;
+            Object obj = ois.readObject();
+//            List<Student> s = (List<Student>) ois.readObject();
+            return (List<Student>)obj;
 
         } catch (RuntimeException e) {
             throw new RuntimeException(e);
@@ -28,9 +29,9 @@ public class DeSerializeCompressedFromGZip {
     }
     public static void main(String[] args) {
         List<Student> s =deserializedStudent("C:\\Users\\Admin\\OneDrive\\Desktop\\Omagri\\objectCompressorStudent_2.gz");
-        for(Student student : s){
+//        for(Student student : s){
             System.out.println(s.toString());
-        }
+//        }
 
     }
 }
